@@ -210,7 +210,7 @@ def start_auto_updater():
     scheduler.add_job(
         func             = check_and_update,
         trigger          = "interval",
-        hours            = 24,
+        hours            = 6,
         id               = "sitemap_check",
         replace_existing = True
     )
