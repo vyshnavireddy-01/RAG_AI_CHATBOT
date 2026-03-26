@@ -1,0 +1,9 @@
+flask
+pymongo
+faiss-cpu
+sentence-transformers
+requests
+beautifulsoup4
+anthropic
+python-dotenv
+numpy
