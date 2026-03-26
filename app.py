@@ -466,7 +466,7 @@ def chat():
                 "1️⃣ <b>Strategy & GTM</b> — Growth, operational, and expansion strategies<br>"
                 "2️⃣ <b>Finance & Capital Architecture</b> — Loans, CFO services, structured financing<br>"
                 "3️⃣ <b>Legal & Governance</b> — Contracts, compliance, IP protection<br>"
-                "4️⃣ <b>Technology & Digital Ecosystem</b> — Web development, AI chatbots, data analytics"
+                "4️⃣ <b>Technology & Digital Ecosystem</b> — Web development, AI chatbots, data analytics,managed Services,"
             ), "suggestions": [
                 "What services does Ealkay provide in Strategy?",
                 "What services does Ealkay provide in Finance?",
@@ -518,7 +518,7 @@ def chat():
             ), "suggestions": ["What services does Ealkay provide in Strategy?", "What services does Ealkay provide in Finance?"]})
 
         # ── FIX 2: SPECIFIC TECH TOPIC QUESTIONS (web dev, data analytics etc) ───
-        if has(q, "web development", "web dev", "website development"):
+        if has(q, "web development", "web dev", "website development,"):
             return jsonify({"answer": (
                 "Ealkay's <b>Web Development</b> service focuses on building dynamic, responsive, "
                 "and high-performance websites for businesses.<br><br>"
@@ -538,7 +538,7 @@ def chat():
                 "data solutions for growth-focused businesses."
             ), "suggestions": ["What services does Ealkay provide in Technology?", "What services does Ealkay provide in Finance?"]})
 
-        if has(q, "ai chatbot", "chatbot service", "chatbot", "artificial intelligence chatbot"):
+        if has(q, "ai chatbot", "chatbot service", "chatbot", "artificial intelligence chatbot","tell me about chatbot"):
             return jsonify({"answer": (
                 "Ealkay's <b>AI Chatbot</b> service involves building intelligent, conversational bots "
                 "that automate customer interactions for businesses.<br><br>"
