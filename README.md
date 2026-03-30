@@ -1,120 +1,136 @@
-RAG Powered AI Chatbot
-This project implements a Retrieval Augmented Generation (RAG) AI Chatbot that can answer questions based on website content.
+# 🤖 RAG AI Chatbot for Ealkay
 
-The system crawls a website, converts the content into embeddings, stores them in a vector database, retrieves relevant information, and generates answers using an AI model.
+An AI-powered Retrieval-Augmented Generation (RAG) chatbot developed for Ealkay. This system retrieves relevant information from company data sources and generates accurate, context-aware responses in real-time.
 
-Technologies Used
-Python
-Flask
-MongoDB
-FAISS (Vector Database)
-Sentence Transformers
-BeautifulSoup
-Anthropic Claude API
-Project Architecture
-User Question
-↓
-Convert Question → Embedding
-↓
-FAISS Vector Search
-↓
-Retrieve Relevant Text Chunks
-↓
-Send Context to Claude AI
-↓
-Generate Final Answer
+---
 
-Project Structure
-RAG Project
-│
-├── app.py
-├── crawler.py
-├── chunker.py
-├── embedder.py
-├── retriever.py
-├── config.py
-│
-├── templates
-│   └── chat.html
-│
-├── vector_store
-│
-├── README.md
-└── .gitignore
-Prerequisites
-Before running the project, install:
+## 🚀 Features
 
-Python 3.10+
-MongoDB
-pip
-Installation
-Clone the repository
+- 🔍 Retrieval-based response system using vector search
+- 🧠 Context-aware answers using LLM integration
+- 🌐 Website data ingestion using crawler
+- 📄 Text chunking and embedding generation
+- ⚡ Real-time chatbot interaction
+- 🔄 Automated scheduled data updates
 
-git clone https://github.com/vyshnavireddy-01/rag-ai-chatbot.git
-Go to project directory
+---
 
-cd rag-ai-chatbot
-Install dependencies
+## 🛠️ Tech Stack
 
-pip install flask pymongo faiss-cpu sentence-transformers requests beautifulsoup4 anthropic python-dotenv
-Set API Key
-This project requires an Anthropic Claude API key.
+- Python
+- Flask
+- MongoDB
+- Vector Embeddings
+- HTML, CSS
+- LLM API (Anthropic / OpenAI)
 
-Set it as an environment variable.
+---
 
-Linux / Mac
+## 📁 Project Structure
+RAG_AI_CHATBOT/
+│── app.py
+│── crawler.py
+│── chunker.py
+│── embedder.py
+│── retriever.py
+│── auto_updater.py
+│── config.py
+│── requirements.txt
+│── templates/
+│ └── chat.html
+│── static/
+│── .gitignore---
 
-export ANTHROPIC_API_KEY="your_api_key"
-Windows (Command Prompt)
+## ⚙️ Installation & Setup
 
-set ANTHROPIC_API_KEY=your_api_key
-Windows (PowerShell)
+### 1. Clone the repository
 
-$env:ANTHROPIC_API_KEY="your_api_key"
-Start MongoDB
-Start MongoDB before running the application.
 
-Example commands:
+git clone https://github.com/yourusername/RAG_AI_CHATBOT.git
 
-mongod
-or start MongoDB service if installed as a service.
+cd RAG_AI_CHATBOT
 
-Run the Application
-Start the Flask server:
+
+---
+
+### 2. Create virtual environment
+
+
+python -m venv venv
+
+
+Activate it:
+
+- Windows:
+
+venv\Scripts\activate
+
+
+- Mac/Linux:
+
+source venv/bin/activate
+---
+
+### 3. Install dependencies
+
+pip install -r requirements.txt
+
+---
+
+### 4. Setup environment variables
+
+Create a `.env` file and add:
+
+
+API_KEY=your_api_key_here
+MONGO_URI=your_mongodb_connection
+
+
+---
+
+### 5. Run the application
+
 
 python app.py
-Open the browser:
 
-http://127.0.0.1:5000
-You will see the chatbot interface.
 
-Ingest Website Data
-Before asking questions, the chatbot must load website content.
+---
 
-Run the following command in a new terminal:
+## 🔄 How It Works
 
-curl -X POST http://127.0.0.1:5000/ingest -H "Content-Type: application/json" -d '{"url":"https://example.com"}'
-This step will:
+1. Crawl website data using `crawler.py`
+2. Split content into chunks using `chunker.py`
+3. Generate embeddings using `embedder.py`
+4. Store embeddings in MongoDB
+5. Retrieve relevant data using `retriever.py`
+6. Generate responses using LLM
+7. Display results via Flask UI
 
-Crawl the website
-Split content into chunks
-Generate embeddings
-Store vectors in FAISS
-Store text in MongoDB
-Example Questions
-Try asking questions such as:
+---
 
-What services does the company provide?
-What are the main offerings?
-What technologies are used?
-What is the company's mission?
-Learning Outcomes
-Students will learn:
+## 🔐 Security Note
 
-Retrieval Augmented Generation (RAG)
-Vector embeddings
-Semantic search
-AI chatbot development
-Integrating LLM APIs
-Building AI-powered web applications
-License
+- Do NOT upload `.env` file to GitHub
+- Keep API keys secure
+- Always use environment variables
+
+---
+
+## 📌 Future Improvements
+
+- User authentication
+- UI/UX improvements
+- Multi-language support
+- Performance optimization
+
+---
+
+## 👩‍💻 Author
+
+Vyshnavi
+
+---
+
+## 📄 License
+
+This project is for educational and internal use.
