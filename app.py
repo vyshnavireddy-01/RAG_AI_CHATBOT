@@ -14,7 +14,7 @@ from dotenv import load_dotenv
 import re
 import threading
 from auto_updater import start_auto_updater
-import math 
+from math import math
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger(__name__)
 
